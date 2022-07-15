@@ -31,8 +31,8 @@
                     </ul>
                     <!-- 2.3 -->
                     <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)" class="color-circle" :style="{backgroundColor: variant.color}"></div>
-                    <!-- 2.4 -->
-                    <button class=" button " :disabled='!inStock' @click="addToCart ">Add to Cart</button>
+                    <!-- 2.5 -->
+                    <button class=" button " :disabled='!inStock' :class="{disabledButton: !inStock}" @click="addToCart ">Add to Cart</button>
                 </div>
             </div>
         </div>
