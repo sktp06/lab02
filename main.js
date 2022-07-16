@@ -16,6 +16,12 @@ const app = Vue.createApp({
 
         }
     },
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product
+        }
+    },
+    
     methods: {
         addToCart() {
             this.cart += 1
