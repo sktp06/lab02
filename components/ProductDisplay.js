@@ -35,6 +35,12 @@ app.component ('product-display',{
                 v-on:click="addToCart">
                 Add to Cart
                 </button>
+
+                <button
+                class="button"
+                v-on:click="removeFromCart">
+                Remove
+                </button>
             </div>
         </div>
     </div>`,
@@ -69,6 +75,10 @@ app.component ('product-display',{
         },
         updateVariant(index) {
             this.selectedVariant = index;
+        },
+        removeFromCart() {
+            this.$emit('remove-from-cart')
+
         }
     },
     computed: {
