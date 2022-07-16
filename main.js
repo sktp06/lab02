@@ -13,13 +13,15 @@ const app = Vue.createApp({
                 { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 0 }
             ],
             selectedVariant:0,
-            cart: 0
+            cart: 0,
+            // 3.5
+            onSale: true
 
         }
     },
     computed: {
         title() {
-            return this.brand + ' ' + this.product
+            return this.brand + ' ' + this.product + (this.onSale ? " On Sale" : "")
         },
         image() {
             return this.variants[this.selectedVariant].image
