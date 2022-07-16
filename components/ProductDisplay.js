@@ -6,7 +6,7 @@ app.component ('product-display',{
         }
     },
     template:
-    // html
+    /*html*/
     `<div class="product-display">
         <div class="product-container">
             <div class="product-image">
